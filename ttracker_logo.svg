@@ -50,9 +50,11 @@
          x="71.689903"
          y="83.603691"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code'"><tspan
-   style="font-size:96px;word-spacing:0px;fill:#e5c07b;fill-opacity:1"
-   id="tspan18288">t</tspan><tspan
-   style="font-size:96px;fill:#56b6c2;fill-opacity:1"
-   id="tspan38779">t</tspan>racker</tspan></text>
+           style="font-size:96px;word-spacing:0px;fill:#e5c07b;fill-opacity:1"
+           id="tspan18288">t</tspan><tspan
+           style="font-size:96px;fill:#56b6c2;fill-opacity:1"
+           id="tspan38779">t</tspan><tspan
+           style="fill:#cccccc"
+           id="tspan76929">racker</tspan></tspan></text>
   </g>
 </svg>
