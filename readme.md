@@ -1,6 +1,9 @@
-![ttracker logo](ttracker_logo.svg?raw=true "ttracker logo")
-
-A simple time tracker for Todoist.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/lucasadelino/ttracker/main/ttracker_logo.svg" alt="Typer">
+</p>
+<p align="center">
+    A simple time tracker for Todoist.
+</p>
 
 # Features
 - Track how much time you spend in your Todoist tasks
