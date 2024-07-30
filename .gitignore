@@ -1,0 +1,5 @@
+*.db
+.reformat*
+.env
+.vscode
+__pycache__

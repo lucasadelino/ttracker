@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="457.94363"
+   height="74.879997"
+   viewBox="0 0 457.94363 74.879997"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="ttracker_logo.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview14"
+     pagecolor="#000000"
+     bordercolor="#999999"
+     borderopacity="1.0"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="1.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.0973349"
+     inkscape:cx="269.74445"
+     inkscape:cy="-45.109292"
+     inkscape:window-width="1248"
+     inkscape:window-height="1391"
+     inkscape:window-x="20"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs9" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-79.517596,-9.8559988)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1.25;font-family:'Fira Code';-inkscape-font-specification:'Fira Code';fill:#ffffff;fill-opacity:1;stroke:none"
+       x="71.689903"
+       y="83.603691"
+       id="text2442"><tspan
+         sodipodi:role="line"
+         id="tspan2440"
+         x="71.689903"
+         y="83.603691"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code'"><tspan
+   style="font-size:96px;word-spacing:0px;fill:#e5c07b;fill-opacity:1"
+   id="tspan18288">t</tspan><tspan
+   style="font-size:96px;fill:#56b6c2;fill-opacity:1"
+   id="tspan38779">t</tspan>racker</tspan></text>
+  </g>
+</svg>
