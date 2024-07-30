@@ -4,10 +4,10 @@ from rofi import Rofi
 import subprocess
 import json
 import os
-from os.path import abspath, dirname
 from dotenv import load_dotenv, find_dotenv
+from lib.utils import ROOT_DIR
 
-os.chdir(dirname(abspath(__file__)))
+os.chdir((ROOT_DIR))
 
 # Read API key from .env file
 load_dotenv(find_dotenv())
@@ -151,4 +151,4 @@ dump = json.dumps(
         id_dict[chosen_id]["labels"],
     )
 )
-subprocess.Popen(["python3", "/home/lcsad/Code/ttracker/polyclient.py", "timer", dump])
+subprocess.Popen(["python3", f"{ROOT_DIR}/lib/polyclient.py", "timer", dump])

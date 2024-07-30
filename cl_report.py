@@ -6,8 +6,7 @@ from rich.console import Console, Group
 from rich.layout import Layout
 from rich.panel import Panel
 from rich.table import Table
-from user_prefs import PRETTY_FORMAT
-from utils import get_db_fragments, DATETIME_FORMAT
+from lib.utils import get_db_fragments, total_time, DATETIME_FORMAT, PRETTY_FORMAT
 import argparse
 
 
@@ -125,21 +124,6 @@ def create_history_table(history_lines, projects):
         )
 
     return history_table
-
-
-def total_time(seconds: int, letters=False) -> str:
-    """Convert seconds to a string of hours and minutes"""
-    result = ""
-    minutes_spent = seconds / 60
-    if minutes_spent >= 60:
-        hours_spent, minutes_spent = divmod(minutes_spent, 60)
-        result += f'{int(hours_spent)}{"h" if letters else ":"}'
-        if minutes_spent > 0:
-            result += f"{int(minutes_spent):02d}"
-    else:
-        result += f'{int(minutes_spent)}{"m" if letters else ""}'
-
-    return result
 
 
 def convert_to_ratio(values, totalie, desired_total):

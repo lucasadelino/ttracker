@@ -3,14 +3,10 @@ import json, sys, time
 import threading
 from datetime import datetime, timedelta
 from polyserver import Server
-import os
-from os.path import abspath, dirname
-from utils import DATETIME_FORMAT
+from utils import DATABASE_PATH, DATETIME_FORMAT, ROOT_DIR
 import subprocess
 import sqlite3
 from contextlib import closing
-
-os.chdir(dirname(abspath(__file__)))
 
 colors = {
     "normal": "#cfcfcf",
@@ -126,7 +122,7 @@ class Timer:
 
     def log(self):
         # Save task to sqlite database
-        with closing(sqlite3.connect("frags.db")) as connection:
+        with closing(sqlite3.connect(DATABASE_PATH)) as connection:
             cursor = connection.cursor()
             # Create table if it doesn't already exist
             cursor.execute(
@@ -154,7 +150,7 @@ class Timer:
             connection.commit()
 
         # Also save task to log text file, for convenience
-        with open("log.txt", "a") as file:
+        with open(f"{ROOT_DIR}/log.txt", "a") as file:
             file.writelines(
                 (
                     f"ID: {self.task_id}\n",

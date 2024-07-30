@@ -1,14 +1,9 @@
 #!/usr/bin/python3
 from datetime import datetime
-from utils import DATETIME_FORMAT
-import os
-from os.path import abspath, dirname
-from cl_report import total_time
-from utils import get_db_fragments
+from utils import DATETIME_FORMAT, get_db_fragments, total_time
 from polyserver import Server
 import time
 
-os.chdir(dirname(abspath(__file__)))
 
 sep_color = "#707880"
 sep = f"%{{F{sep_color}}}|%{{F-}}"

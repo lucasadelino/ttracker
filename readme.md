@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/lucasadelino/ttracker/main/ttracker_logo.svg" alt="Typer">
+  <img src="https://raw.githubusercontent.com/lucasadelino/ttracker/main/assets/ttracker_logo.svg" alt="Typer">
 </p>
 <p align="center">
     A simple time tracker for Todoist.
@@ -10,7 +10,7 @@
 - Free-flow time tracking, so your timer fits your focus sessions, and not the opposite.
 - Generate beautiful terminal reports, including statistics on time spent focused for each hour and for each project.
 
-![ttracker report example](cl_log.png?raw=true "ttracker report example")
+![ttracker report example](assets/cl_log.png?raw=true "ttracker report example")
 
 # Requirements
 - dotenv
@@ -47,4 +47,6 @@ To sum it up, this project is likely to be useful to you if you:
 
 # Roadmap
 - Add support for more user preferences to customize task selection and report behavior
+  - Add more ways to display subprojects, project sections, and subtasks.
 - Add more planning features, such as support for estimating time and comparing estimated with actual time spent on each task.
+- Use the Todoist Sync API for quicker access to task data
