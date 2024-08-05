@@ -4,7 +4,6 @@ from utils import DATETIME_FORMAT, get_db_fragments, total_time
 from polyserver import Server
 import time
 
-
 sep_color = "#707880"
 sep = f"%{{F{sep_color}}}|%{{F-}}"
 session_icon = ""
@@ -48,10 +47,11 @@ while True:
         message = server.listen()
 
     if message:
+        time.sleep(0.25)
         sessions, total_str = calculate_sessions()
         print(f"{session_icon} {sessions} {sep} {time_icon} {total_str}", flush=True)
 
     if first_iteration:
         first_iteration = False
 
-    time.sleep(1)
+    time.sleep(0.25)
