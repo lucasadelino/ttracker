@@ -1,3 +1,5 @@
+from math import e
+from numpy import full
 from todoist_api_python.api import TodoistAPI
 from datetime import datetime
 from rofi import Rofi
@@ -6,6 +8,7 @@ import json
 import os
 from dotenv import load_dotenv, find_dotenv
 from lib.utils import ROOT_DIR
+from user_prefs import SORT_BY
 
 os.chdir((ROOT_DIR))
 
@@ -23,6 +26,7 @@ other_dict = {}  # Dict with all tasks NOT due today
 bottom_only = {}  # Dict with all tasks that don't have children
 displayed_ids = []
 displayed_contents = []
+project_list = []  # Just for sorting, later
 
 max_task_len = 0
 max_project_len = 0
@@ -105,12 +109,13 @@ width = 0
 print("Making project display strings...")
 for i, task_id in enumerate(displayed_ids):
     task_info = id_dict[task_id]
-    display_str = displayed_contents[i]
-
+    display_task = displayed_contents[i]
     this_project = "#" + project_id_dict[task_info["project_id"]]["name"]
+    project_list.append(this_project)
     # Add pango markup to color the project name
-    this_project = f'<span fgalpha="60%" style="italic">{this_project}</span>'
-    full_str = f"{display_str.ljust(50)}{this_project.rjust(20)}"
+    display_project = f'<span fgalpha="60%" style="italic">{this_project}</span>'
+    print(len(display_task))
+    full_str = f"{display_task.ljust(40)}{display_project.rjust(60)}"
     displayed_contents[i] = full_str
 
     if len(full_str) > width:
@@ -123,9 +128,21 @@ rofi = Rofi(
         "-i",
         "-markup-rows",
         "-theme-str",
-        f"window{{ width: {int(width/1.55)}ch; }}",
+        f"window{{ width: {int(width/1.58)}ch; }}",
     ]
 )
+
+if SORT_BY:
+    if SORT_BY == "project name":
+        key = lambda x: x[0]
+    elif SORT_BY == "project length":
+        key = lambda x: len(x[0])
+
+    assert key, "Invalid SORT_BY value"
+
+    project_list, displayed_contents, displayed_ids = zip(
+        *sorted(zip(project_list, displayed_contents, displayed_ids), key=key)
+    )
 
 i, key = rofi.select(
     "TTracker Set",
