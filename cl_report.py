@@ -7,6 +7,7 @@ from rich.layout import Layout
 from rich.panel import Panel
 from rich.table import Table
 from lib.utils import get_db_fragments, total_time, DATETIME_FORMAT, PRETTY_FORMAT
+from user_prefs import RENAME_COLORS
 import argparse
 
 
@@ -162,9 +163,6 @@ def iteratie_over_dict(result, lookup_day, tick_row_width, chunk_len):
     hour_lines = {}
 
     # inactive = "gray37"
-    rename_colors = {
-        "sky_blue": "cyan",
-    }
 
     for i, item in enumerate(result):
         start_datetime = datetime.strptime(
@@ -182,8 +180,8 @@ def iteratie_over_dict(result, lookup_day, tick_row_width, chunk_len):
 
         # Rename color if necessary
         this_color = item["project_color"]
-        if this_color in rename_colors:
-            this_color = rename_colors[this_color]
+        if this_color in RENAME_COLORS:
+            this_color = RENAME_COLORS[this_color]
 
         # Save project duration and color
         projects.setdefault(item["project_name"], {"duration": 0, "color": this_color})
