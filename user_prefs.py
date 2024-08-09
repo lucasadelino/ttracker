@@ -9,7 +9,8 @@ TIME_FORMAT = "%H:%M:%S"
 DATETIME_FORMAT = f"{DATE_FORMAT} {TIME_FORMAT}"
 PRETTY_FORMAT = "%-I:%M"
 
-# cl_report preferences
+######################################################################
+# Terminal report (cl_report.py) preferences
 
 # Colors to rename in the report
 # By default, these are color names used by Todoist that have no direct equivalent in the terminal
@@ -18,7 +19,8 @@ RENAME_COLORS = {
     "sky_blue": "cyan",
 }
 
-# set_task preferences
+######################################################################
+# Task Selection (set_task.py) preferences
 
 # Customize the sort preference of tasks displayed by Rofi
 # Options: "project name", "project length"
